@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureADWebApp1", "AzureADWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenIdConnectWebApp1", "OpenIdConnectWebApp1\OpenIdConnectWebApp1.csproj", "{9896C96A-847C-4A64-93C4-F2B3E3DE518E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSFedWebApp1", "WSFedWebApp1\WSFedWebApp1.csproj", "{F16B8042-A276-4DC3-B71E-909737022CFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9896C96A-847C-4A64-93C4-F2B3E3DE518E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9896C96A-847C-4A64-93C4-F2B3E3DE518E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9896C96A-847C-4A64-93C4-F2B3E3DE518E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F16B8042-A276-4DC3-B71E-909737022CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16B8042-A276-4DC3-B71E-909737022CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16B8042-A276-4DC3-B71E-909737022CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16B8042-A276-4DC3-B71E-909737022CFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
