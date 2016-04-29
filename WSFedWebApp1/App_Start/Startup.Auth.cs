@@ -37,7 +37,7 @@ namespace WSFedWebApp1
 
             app.UseWsFederationAuthentication(
                 new WsFederationAuthenticationOptions
-                {
+                {                    
                     Wtrealm = realm,
                     MetadataAddress = metadata,
                     Notifications = new WsFederationAuthenticationNotifications
@@ -47,7 +47,27 @@ namespace WSFedWebApp1
                             context.HandleResponse();
                             context.Response.Redirect("Home/Error?message=" + context.Exception.Message);
                             return Task.FromResult(0);
+                        },
+                        MessageReceived = context =>
+                        {
+                            return Task.FromResult(0);
+                        },
+                        RedirectToIdentityProvider = context =>
+                        {
+                            
+                            return Task.FromResult(0);
+                        },
+                        SecurityTokenReceived = context =>
+                        {
+                            var principal = System.Security.Claims.ClaimsPrincipal.Current;
+                            return Task.FromResult(0);
+                        },
+                        SecurityTokenValidated = context =>
+                        {
+                            var principal = System.Security.Claims.ClaimsPrincipal.Current;
+                            return Task.FromResult(0);
                         }
+
                     }
                 });
         }
