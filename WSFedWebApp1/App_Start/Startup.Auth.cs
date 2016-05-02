@@ -70,6 +70,17 @@ namespace WSFedWebApp1
 
                     }
                 });
+
+            app.UseClaimsTransformation();
+        }
+    }
+
+    public static class AppBuilderExtensions
+    {
+        public static IAppBuilder UseClaimsTransformation(this IAppBuilder app)
+        {
+            app.Use(typeof(ClaimsTransformationMiddleware));
+            return app;
         }
     }
 }
