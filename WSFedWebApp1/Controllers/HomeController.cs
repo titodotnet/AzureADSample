@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Owin.Security;
+using System;
 using System.Collections.Generic;
 //using System.IdentityModel.Claims;
 using System.Linq;
@@ -13,6 +14,15 @@ namespace WSFedWebApp1.Controllers
     {
         public ActionResult Index()
         {
+            //if (Request.IsAuthenticated)
+            //{
+            //    // Add claim - Begin
+            //    IAuthenticationManager authenticationManager = HttpContext.GetOwinContext().Authentication;
+            //    ClaimsIdentity identity = new ClaimsIdentity(User.Identity);
+            //    identity.AddClaim(new Claim(ClaimTypes.Role, "custom role"));
+            //    authenticationManager.AuthenticationResponseGrant = new AuthenticationResponseGrant(new ClaimsPrincipal(identity), new AuthenticationProperties { IsPersistent = true });
+            //    // Add claim - End
+            //}
             return View();
         }
 
