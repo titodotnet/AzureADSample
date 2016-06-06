@@ -23,6 +23,7 @@ namespace WSFedWebApp1.Controllers
             //    authenticationManager.AuthenticationResponseGrant = new AuthenticationResponseGrant(new ClaimsPrincipal(identity), new AuthenticationProperties { IsPersistent = true });
             //    // Add claim - End
             //}
+            //(User as ClaimsPrincipal).HasClaim()
             return View();
         }
 

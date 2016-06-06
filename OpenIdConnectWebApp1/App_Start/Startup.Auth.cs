@@ -39,6 +39,11 @@ namespace OpenIdConnectWebApp1
                     PostLogoutRedirectUri = postLogoutRedirectUri,
                     Notifications = new OpenIdConnectAuthenticationNotifications
                     {
+                        AuthorizationCodeReceived = context =>
+                        {
+                            string userObjectID = context.AuthenticationTicket.Identity.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier").Value;
+                            return Task.FromResult(0);
+                        },
                         AuthenticationFailed = context =>
                         {
                             context.HandleResponse();
